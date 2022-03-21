@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import Restaurants from "../../components/Restaurants/Restaurants";
 import useRestaurants from "../../hooks/useRestaurants";
 
-export default function Home() {
+export default function HomeScreen() {
   const [term, setTerm] = useState("");
   const [commonCategories] = useState([
     {
@@ -50,7 +50,11 @@ export default function Home() {
         setTerm={setTerm}
         term={term}
       />
-      <Restaurants data={data} loading={loading} error={error} />
+      <Restaurants
+        data={data}
+        loading={loading}
+        error={error}
+      />
     </View>
   );
 }

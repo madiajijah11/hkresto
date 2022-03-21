@@ -33,6 +33,7 @@ export default function Restaurants({ data, error, loading }) {
         maxToRenderPerBatch={5}
         updateCellsBatchingPeriod={50}
         initialNumToRender={10}
+        contentContainerStyle={{ paddingBottom: 25 }}
       />
     </View>
   );

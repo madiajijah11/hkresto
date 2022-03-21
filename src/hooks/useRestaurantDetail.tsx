@@ -8,24 +8,17 @@ export default () => {
     error: null,
   });
 
-  const searchRestaurants = async (searchTerm) => {
+  const fetchRestaurant = async (id) => {
     setResults({
       data: null,
       loading: true,
       error: null,
     });
     try {
-      const response = await yelpApi.get("/search", {
-        params: {
-          limit: 20,
-          location: "hong kong",
-          radius: 40000,
-          term: searchTerm,
-        },
-      });
+      const response = await yelpApi.get(`/${id}`);
       // console.log(response);
       setResults({
-        data: response.data.businesses,
+        data: response.data,
         loading: false,
         error: null,
       });
@@ -38,5 +31,5 @@ export default () => {
     }
   };
 
-  return [results, searchRestaurants];
+  return [results, fetchRestaurant];
 };
