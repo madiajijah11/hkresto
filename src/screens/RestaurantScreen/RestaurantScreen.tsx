@@ -11,7 +11,7 @@ import styles from "./styles";
 import useRestaurantDetail from "../../hooks/useRestaurantDetail";
 import { useRoute, useNavigation } from "@react-navigation/native";
 
-export default function RestaurantScreen() {
+const RestaurantScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const [{ data, loading, error }, fetchRestaurant] = useRestaurantDetail();
@@ -78,4 +78,6 @@ export default function RestaurantScreen() {
       </TouchableOpacity>
     </View>
   );
-}
+};
+
+export default RestaurantScreen;

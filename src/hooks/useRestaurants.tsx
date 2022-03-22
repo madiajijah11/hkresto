@@ -8,7 +8,7 @@ export default () => {
     error: null,
   });
 
-  const searchRestaurants = async (searchTerm) => {
+  const searchRestaurants = async (searchTerm: string) => {
     setResults({
       data: null,
       loading: true,

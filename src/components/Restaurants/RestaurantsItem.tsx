@@ -4,7 +4,7 @@ import styles from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-function RestaurantsItem({ restaurant }) {
+function RestaurantsItem({ restaurant }: any) {
   const navigation = useNavigation();
   return (
     <TouchableOpacity

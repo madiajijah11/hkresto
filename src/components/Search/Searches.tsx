@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import styles from "./styles";
 
-const SearchItem = ({ setTerm }) => {
+const SearchItem = ({ setTerm }: any) => {
   const [input, setInput] = useState("");
 
   return (

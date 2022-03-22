@@ -8,7 +8,7 @@ export default () => {
     error: null,
   });
 
-  const fetchRestaurant = async (id) => {
+  const fetchRestaurant = async (id: string) => {
     setResults({
       data: null,
       loading: true,

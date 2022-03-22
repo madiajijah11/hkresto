@@ -50,11 +50,7 @@ export default function HomeScreen() {
         setTerm={setTerm}
         term={term}
       />
-      <Restaurants
-        data={data}
-        loading={loading}
-        error={error}
-      />
+      <Restaurants data={data} loading={loading} error={error} />
     </View>
   );
 }

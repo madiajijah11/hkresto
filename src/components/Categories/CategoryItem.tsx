@@ -2,7 +2,7 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./styles";
 
-const CategoryItem = ({ category, active, categoryPress }) => {
+const CategoryItem = ({ category, active, categoryPress }: any) => {
   return (
     <TouchableOpacity onPress={categoryPress}>
       <View

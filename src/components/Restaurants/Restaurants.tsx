@@ -3,12 +3,18 @@ import React from "react";
 import styles from "./styles";
 import RestaurantsItem from "./RestaurantsItem";
 
-export default function Restaurants({ data, error, loading }) {
+interface RestaurantsProps {
+  data: any;
+  loading: boolean;
+  error: string;
+}
+
+const Restaurants = ({ data, loading, error }: RestaurantsProps) => {
   if (loading)
     return (
       <ActivityIndicator
         style={{
-          marginVertical: 30,
+          marginVertical: 0,
         }}
         size="large"
       />
@@ -37,4 +43,6 @@ export default function Restaurants({ data, error, loading }) {
       />
     </View>
   );
-}
+};
+
+export default Restaurants;
